@@ -1,4 +1,4 @@
-import Overview from "./components/Overview";
+import Overview from "./components/overview";
 import Skill from "./components/skill";
 import History from "./components/history";
 import LinksAndContact from "./components/linksAndContact";
