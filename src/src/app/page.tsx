@@ -4,7 +4,6 @@ import History from "./components/history";
 import LinksAndContact from "./components/linksAndContact";
 
 export default function Home() {
-
   const td = new Date();
 
   return (
@@ -16,7 +15,9 @@ export default function Home() {
       <History />
       <LinksAndContact />
       <hr className="my-1" />
-      <div className="text-gray-50 text-center mb-1"><small>&copy;Sneko { td.getFullYear() }</small></div>
+      <div className="text-gray-50 text-center mb-1">
+        <small>&copy;Sneko {td.getFullYear()}</small>
+      </div>
     </main>
-  )
+  );
 }
