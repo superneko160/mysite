@@ -18,6 +18,7 @@ export default function InputEmail() {
         id="email-address-icon"
         className="text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
         placeholder="Your@email.com"
+        required
       />
     </div>
   );
