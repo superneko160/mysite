@@ -1,4 +1,4 @@
 export type HistoryData = {
-  title: string,
-  content: string
+  title: string;
+  content: string;
 };

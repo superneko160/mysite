@@ -1,4 +1,12 @@
-export default function InputEmail() {
+"use client";
+
+import React from "react";
+
+type InputEmailProps = {
+  name: string;
+};
+
+export default function InputEmail({ name }: InputEmailProps) {
   return (
     <div className="relative mb-1">
       <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
@@ -19,6 +27,7 @@ export default function InputEmail() {
         className="text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
         placeholder="Your@email.com"
         required
+        name={name}
       />
     </div>
   );

@@ -1,10 +1,10 @@
-import type {HistoryData} from './historyData';
+import type { HistoryData } from "./historyData";
 
 type HistoryDataProps = {
-  content: HistoryData[]
+  content: HistoryData[];
 };
 
-export default function History({content}: HistoryDataProps) {
+export default function History({ content }: HistoryDataProps) {
   return (
     <div className="max-w-full my-2">
       <div className="bg-sky-950 rounded p-4 flex flex-col justify-between leading-normal">
