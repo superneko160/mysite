@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FormEvent, useState, ChangeEvent } from "react";
+import React, { FormEvent, useState } from "react";
 import InputEmail from "./inputEmail";
 import Textarea from "./textarea";
 import Button from "./button";
