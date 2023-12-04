@@ -4,10 +4,17 @@ import React from "react";
 
 type TextareaProps = {
   name: string;
+  value: string;
   maxlength: number;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
-export default function Textarea({ name, maxlength }: TextareaProps) {
+export default function Textarea({
+  name,
+  value,
+  maxlength,
+  onChange,
+}: TextareaProps) {
   const placeholder = `The message you can send is limited to ${maxlength} characters`;
 
   return (
@@ -16,7 +23,9 @@ export default function Textarea({ name, maxlength }: TextareaProps) {
       placeholder={placeholder}
       required
       name={name}
+      value={value}
       maxLength={maxlength}
+      onChange={onChange}
     ></textarea>
   );
 }

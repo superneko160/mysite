@@ -4,9 +4,11 @@ import React from "react";
 
 type InputEmailProps = {
   name: string;
+  value: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export default function InputEmail({ name }: InputEmailProps) {
+export default function InputEmail({ name, value, onChange }: InputEmailProps) {
   return (
     <div className="relative mb-1">
       <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
@@ -28,6 +30,8 @@ export default function InputEmail({ name }: InputEmailProps) {
         placeholder="Your@email.com"
         required
         name={name}
+        value={value}
+        onChange={onChange}
       />
     </div>
   );
