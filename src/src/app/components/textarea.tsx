@@ -6,6 +6,7 @@ type TextareaProps = {
   name: string;
   value: string;
   maxlength: number;
+  minlength: number;
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
@@ -13,6 +14,7 @@ export default function Textarea({
   name,
   value,
   maxlength,
+  minlength,
   onChange,
 }: TextareaProps) {
   const placeholder = `The message you can send is limited to ${maxlength} characters`;
@@ -25,6 +27,7 @@ export default function Textarea({
       name={name}
       value={value}
       maxLength={maxlength}
+      minLength={minlength}
       onChange={onChange}
     ></textarea>
   );

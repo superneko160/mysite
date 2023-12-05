@@ -1,6 +1,7 @@
 "use client";
 
 import React, { FormEvent, useState } from "react";
+import { z } from "zod";
 import InputEmail from "./inputEmail";
 import Textarea from "./textarea";
 import Button from "./button";
@@ -31,14 +32,29 @@ export default function Contact() {
   // SendMessageボタン押下時、フォームの値をapi/contact/route.tsにPOST送信
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    // フォームの値を取得
     const formData = new FormData(event.currentTarget);
-    const email = formData.get("email");
-    const message = formData.get("textarea");
+    // フォームの値のバリデーション
+    const email = z.string().email();
+    const textarea = z.string();
+    const form_email = email.safeParse(formData.get("email"));
+    if (!form_email.success) {
+      alert("Eメールの形式ではありません");
+      return;
+    }
+    const form_textarea = textarea.safeParse(formData.get("textarea"));
+    if (!form_textarea.success) {
+      alert("テキストエリアに入力された値が不正です");
+      return;
+    }
+    // メッセージ送信
     const response = await fetch("/api/contact", {
       method: "POST",
-      body: JSON.stringify({ email: email, message: message }),
+      body: JSON.stringify({ email: form_email.data, message: form_textarea.data }),
     });
+    // レスポンス取得
     const result = await response.json();
+    // 結果表示
     alert(result.body);
     // フォーム初期化
     setData((prevFormData) => ({
@@ -59,8 +75,9 @@ export default function Contact() {
         <div className="mb-1">
           <Textarea
             name={"textarea"}
-            maxlength={200}
             value={data.textarea}
+            maxlength={200}
+            minlength={1}
             onChange={handleChange}
           />
         </div>
