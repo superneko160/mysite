@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ProfilePicture() {
   return (
-    <div className="flex justify-center items-center">
+    <>
       <Image
         src="/profile_picture.png"
         alt="Profile picture"
@@ -10,6 +10,6 @@ export default function ProfilePicture() {
         height={200}
         className="rounded-full"
       />
-    </div>
+    </>
   );
 }

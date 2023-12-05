@@ -81,7 +81,7 @@ export default function Contact() {
             onChange={handleChange}
           />
         </div>
-        <div className="mb-1">
+        <div className="flex mb-1 justify-center sm:justify-start">
           <Button text={"Send Message"} />
         </div>
       </form>

@@ -9,7 +9,9 @@ export default function Overview({ content }: OverviewProps) {
         <div className="mb-8">
           <div className="text-gray-50 font-bold text-xl mb-2">Overview</div>
           <div className="sm:flex flex-none justify-center items-center gap-2 mt-3">
-            <ProfilePicture />
+            <div className="flex justify-center items-center">
+              <ProfilePicture />
+            </div>
             <p className="text-gray-50 text-base">{content}</p>
           </div>
         </div>
