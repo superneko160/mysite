@@ -50,6 +50,10 @@ export default function Contact() {
     // メッセージ送信
     const response = await fetch("/api/contact", {
       method: "POST",
+      // headers: {
+      //   Accept: "application/json, text/plain",
+      //   "Content-Type": "applicaton/json"
+      // },
       body: JSON.stringify({ email: form_email.data, message: form_textarea.data }),
     });
     // レスポンス取得
