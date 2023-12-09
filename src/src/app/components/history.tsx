@@ -16,10 +16,10 @@ export default function History({ content }: HistoryDataProps) {
               {content.map((history) => (
                 <li className="mb-2">
                   <div className="flex items-center mb-1">
-                    <div className="bg-gray-50 rounded-full h-8 w-8"></div>
-                    <div className="flex-1 ml-4 font-bold">{history.title}</div>
+                    <div className="text-gray-50 rounded-full h-8 w-8"></div>
+                    <div className="flex-1 ml-4 bg-gray-50 font-bold">{history.title}</div>
                   </div>
-                  <div className="ml-12">{history.content}</div>
+                  <div className="ml-12 text-gray-50">{history.content}</div>
                 </li>
               ))}
             </ul>

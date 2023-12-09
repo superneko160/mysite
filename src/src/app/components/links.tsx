@@ -1,7 +1,7 @@
 export default function Links() {
   return (
     <div className="py-2">
-      <h2 className="text-xl mb-0.5">Links</h2>
+      <h2 className="text-xl text-gray-50 mb-0.5">Links</h2>
       <a href="https://github.com/superneko160" target="_blank">
         <button
           type="button"
