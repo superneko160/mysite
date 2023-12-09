@@ -2,4 +2,4 @@ docker-compose.yml
 Dockerfile
 README.md
 src/README.md
-prettier.json
+src/prettier.json
