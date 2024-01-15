@@ -7,7 +7,7 @@ export default function Overview({ content }: OverviewProps) {
     <div className="max-w-full my-2">
       <div className="bg-sky-950 rounded p-4 flex flex-col justify-between leading-normal">
         <div className="mb-8">
-          <div className="text-gray-50 font-bold text-xl mb-2">Overview</div>
+          <h2 className="text-gray-50 font-bold text-xl mb-2">Overview</h2>
           <div className="sm:flex flex-none justify-center items-center gap-2 mt-3">
             <div className="flex justify-center items-center">
               <ProfilePicture />

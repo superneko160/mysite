@@ -5,8 +5,24 @@ export default function Skill({ content }: SkillProps) {
     <div className="max-w-full my-2">
       <div className="bg-sky-950 rounded p-4 flex flex-col justify-between leading-normal">
         <div className="mb-8">
-          <div className="text-gray-50 font-bold text-xl mb-2">Skill</div>
+          <h2 className="text-gray-50 font-bold text-xl mb-2">Skill</h2>
           <p className="text-gray-50 text-base">{content}</p>
+          <div className="mt-5">
+            <h3 className="text-xl text-gray-50 mb-0.5">Language</h3>
+            <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,ts,php,py,java,cs,rust&perline=5" />
+          </div>
+          <div className="mt-4">
+            <h3 className="text-xl text-gray-50 mb-0.5">Library and Framework</h3>
+            <img src="https://skillicons.dev/icons?i=react,nextjs,laravel,tailwind,jquery" />
+          </div>
+          <div  className="mt-4">
+            <h3 className="text-xl text-gray-50 mb-0.5">Database</h3>
+            <img src="https://skillicons.dev/icons?i=mysql,postgres,sqlite" />
+          </div>
+          <div  className="mt-4">
+            <h3 className="text-xl text-gray-50 mb-0.5">Others</h3>
+            <img src="https://skillicons.dev/icons?i=git,docker,linux,vim,firebase" />
+          </div>
         </div>
       </div>
     </div>

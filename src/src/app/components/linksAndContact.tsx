@@ -6,9 +6,9 @@ export default function LinksAndContact() {
     <div className="max-w-full my-2">
       <div className="bg-sky-950 rounded p-4 flex flex-col justify-between leading-normal">
         <div className="mb-8">
-          <div className="text-gray-50 font-bold text-xl mb-2">
+          <h2 className="text-gray-50 font-bold text-xl mb-2">
             Links & Contact
-          </div>
+          </h2>
           <Links />
           <Contact />
         </div>
