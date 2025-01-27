@@ -1,4 +1,4 @@
-import type { HistoryData } from "./components/historyData";
+import type { HistoryData } from "./types/HistoryData/";
 import Overview from "./components/overview";
 import Skill from "./components/skill";
 import History from "./components/history";
@@ -19,7 +19,9 @@ export default function Home() {
 
   return (
     <main className="container mx-auto px-8 bg-slate-950">
-      <h1 className="text-4xl font-bold text-gray-50 text-center mt-2">Sneko</h1>
+      <h1 className="text-4xl font-bold text-gray-50 text-center mt-2">
+        Sneko
+      </h1>
       <hr className="my-2" />
       <Overview content={overview_content} />
       <Skill content={skill_content} />

@@ -2,7 +2,6 @@ import { NextRequest } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
-
   const body = await request.json();
 
   const transporter = nodemailer.createTransport({
@@ -10,8 +9,8 @@ export async function POST(request: NextRequest) {
     port: 465,
     auth: {
       user: process.env.MAILUSER,
-      pass: process.env.MAILPASSWORD
-    }
+      pass: process.env.MAILPASSWORD,
+    },
   });
 
   const toHostMailData = {
@@ -25,14 +24,11 @@ export async function POST(request: NextRequest) {
     const info = await transporter.sendMail(toHostMailData);
     console.log(info);
     const data = `送信完了\n返信先:${body.email}\n${body.message}`;
-    return new Response(
-      JSON.stringify({ body: data })
-    );
-  }
-  catch (error) {
+    return new Response(JSON.stringify({ body: data }));
+  } catch (error) {
     console.error(error);
     return new Response(
-      JSON.stringify({ body: "Error!\nメッセージが送信できませんでした" })
+      JSON.stringify({ body: "Error!\nメッセージが送信できませんでした" }),
     );
   }
 }

@@ -50,7 +50,10 @@ export default function Contact() {
 
     const response = await fetch("/api/contact", {
       method: "POST",
-      body: JSON.stringify({ email: form_email.data, message: form_textarea.data }),
+      body: JSON.stringify({
+        email: form_email.data,
+        message: form_textarea.data,
+      }),
     });
 
     const result = await response.json();
