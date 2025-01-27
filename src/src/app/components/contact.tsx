@@ -19,10 +19,9 @@ export default function Contact() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    // 変更された入力値
     const target = e.target as HTMLInputElement;
     const { name, value } = target;
-    // 入力フォームに情報をセット
+
     setData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
@@ -32,9 +31,9 @@ export default function Contact() {
   // SendMessageボタン押下時、フォームの値をapi/contact/route.tsにPOST送信
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    // フォームの値を取得
+
     const formData = new FormData(event.currentTarget);
-    // フォームの値のバリデーション
+
     const email = z.string().email();
     const textarea = z.string();
     const form_email = email.safeParse(formData.get("email"));
@@ -42,24 +41,22 @@ export default function Contact() {
       alert("Eメールの形式ではありません");
       return;
     }
+
     const form_textarea = textarea.safeParse(formData.get("textarea"));
     if (!form_textarea.success) {
       alert("テキストエリアに入力された値が不正です");
       return;
     }
-    // メッセージ送信
+
     const response = await fetch("/api/contact", {
       method: "POST",
-      // headers: {
-      //   Accept: "application/json, text/plain",
-      //   "Content-Type": "applicaton/json"
-      // },
       body: JSON.stringify({ email: form_email.data, message: form_textarea.data }),
     });
-    // レスポンス取得
+
     const result = await response.json();
-    // 結果表示
+
     alert(result.body);
+
     // フォーム初期化
     setData((prevFormData) => ({
       ...prevFormData,
