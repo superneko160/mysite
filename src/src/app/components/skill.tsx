@@ -21,7 +21,7 @@ export default function Skill({ content }: SkillProps) {
           </div>
           <div  className="mt-4">
             <h3 className="text-xl text-gray-50 mb-0.5">Others</h3>
-            <img src="https://skillicons.dev/icons?i=git,docker,linux,vim,firebase" />
+            <img src="https://skillicons.dev/icons?i=git,docker,bash,vim,figma" />
           </div>
         </div>
       </div>
