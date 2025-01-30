@@ -62,11 +62,7 @@ export default function Contact() {
 
     // フォーム初期化
     setData((prevFormData) => ({
-      ...prevFormData,
       email: "",
-    }));
-    setData((prevFormData) => ({
-      ...prevFormData,
       textarea: "",
     }));
   }
