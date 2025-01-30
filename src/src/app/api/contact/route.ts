@@ -14,7 +14,6 @@ export async function POST(request: NextRequest) {
   });
 
   const toHostMailData = {
-    // from: body.email,
     to: process.env.TOMAIL,
     subject: "お問い合わせ(mysite)",
     text: `返信先：${body.email}\n${body.message}`,
@@ -22,7 +21,6 @@ export async function POST(request: NextRequest) {
 
   try {
     const info = await transporter.sendMail(toHostMailData);
-    console.log(info);
     const data = `送信完了\n返信先:${body.email}\n${body.message}`;
     return new Response(JSON.stringify({ body: data }));
   } catch (error) {
