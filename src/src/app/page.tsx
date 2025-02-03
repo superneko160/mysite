@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import type { HistoryData } from "./types/HistoryData/";
 import Overview from "./components/overview";
 import Skill from "./components/skill";
@@ -19,9 +21,18 @@ export default function Home() {
 
   return (
     <main className="container mx-auto px-8 bg-slate-950">
-      <h1 className="text-4xl font-bold text-gray-50 text-center mt-2">
-        Sneko
-      </h1>
+      <div className="flex items-center justify-center">
+        <Image 
+          src="/paws.png" 
+          alt="Paw icon" 
+          width={30} 
+          height={30} 
+          className="mr-1 mt-2"
+        />
+        <h1 className="text-4xl font-bold text-gray-50 text-center mt-2">
+          Sneko
+        </h1>
+      </div>
       <hr className="my-2" />
       <Overview content={overview_content} />
       <Skill content={skill_content} />
