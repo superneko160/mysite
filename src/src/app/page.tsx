@@ -8,9 +8,9 @@ import LinksAndContact from "./components/linksAndContact";
 
 export default function Home() {
   const overview_content =
-    "Hello,there. I am Sneko. I can write a little program. I am more interested in the backend. What else? I like cats, but I don't have one, because I'm a cat myself.";
+    "Hi there. I'm Sneko. I can write some programs and I'm particularly interested in backend development. A bit about me: I love cats, though I don't have one at the moment.";
   const skill_content =
-    "I have over 7 years of experience in PHP and JavaScript, a little bit of Python, and can write TypeScript, Java, C#, etc. Rust is under study. I can use MySQL and PostgreSQL as databases. My favorite tools are Git and Docker.";
+    "I have over 8 years of experience in PHP and JavaScript, a little bit of Python, and can write TypeScript, Java, C#, etc. Rust is under study. I can use MySQL and PostgreSQL as databases. My favorite tools are Git and Docker.";
   const history_content: HistoryData[] = [
     { title: "Aug 1992", content: "I was born." },
     { title: "Apr 2015", content: "First programming." },
