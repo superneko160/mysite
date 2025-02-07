@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const info = await transporter.sendMail(toHostMailData);
-    const data = `送信完了\n返信先:${body.email}\n${body.message}`;
+    const data = `送信完了\n返信先:${body.email}`;
     return new Response(JSON.stringify({ body: data }));
   } catch (error) {
     console.error(error);
