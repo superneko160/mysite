@@ -21,12 +21,12 @@ export async function POST(request: NextRequest) {
 
   try {
     const info = await transporter.sendMail(toHostMailData);
-    const data = `送信完了\n返信先:${body.email}\n${body.message}`;
+    const data = `Message sent.\n送信完了\nReply-To:${body.email}`;
     return new Response(JSON.stringify({ body: data }));
   } catch (error) {
     console.error(error);
     return new Response(
-      JSON.stringify({ body: "Error!\nメッセージが送信できませんでした" }),
+      JSON.stringify({ body: "Failed to send message. Please try again later.\nメッセージが送信できませんでした。数分後に再度お試しください。" }),
     );
   }
 }
