@@ -11,21 +11,33 @@ export default function Skill({ content }: SkillProps) {
             <h3 className="text-xl text-gray-50 mb-0.5">
               Programming Language
             </h3>
-            <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,ts,php,py,java,cs,rust&perline=5" />
+            <img
+              src="https://skillicons.dev/icons?i=html,css,js,nodejs,ts,php,py,java,cs,rust&perline=5"
+              alt="skill:programming language html,css,js,nodejs,ts,php,py,java,cs,rust"
+            />
           </div>
           <div className="mt-4">
             <h3 className="text-xl text-gray-50 mb-0.5">
               Library and Framework
             </h3>
-            <img src="https://skillicons.dev/icons?i=react,nextjs,laravel,tailwind,jquery" />
+            <img
+              src="https://skillicons.dev/icons?i=react,nextjs,laravel,tailwind,jquery"
+              alt="skill:Library and Framework react,nextjs,laravel,tailwind,jquery"
+            />
           </div>
           <div className="mt-4">
             <h3 className="text-xl text-gray-50 mb-0.5">Database</h3>
-            <img src="https://skillicons.dev/icons?i=mysql,postgres,sqlite" />
+            <img
+              src="https://skillicons.dev/icons?i=mysql,postgres,sqlite"
+              alt="skill:Database mysql,postgres,sqlite"
+            />
           </div>
           <div className="mt-4">
             <h3 className="text-xl text-gray-50 mb-0.5">Others</h3>
-            <img src="https://skillicons.dev/icons?i=git,githubactions,bash,vim,docker,prisma,vite,vitest,figma&perline=5" />
+            <img
+              src="https://skillicons.dev/icons?i=git,githubactions,bash,vim,docker,prisma,vite,vitest,figma&perline=5"
+              alt="skill:Others git,githubactions,bash,vim,docker,prisma,vite,vitest,figma"
+            />
           </div>
         </div>
       </div>
