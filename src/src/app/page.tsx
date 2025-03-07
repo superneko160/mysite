@@ -22,11 +22,11 @@ export default function Home() {
   return (
     <main className="container mx-auto px-8 bg-slate-950">
       <div className="flex items-center justify-center">
-        <Image 
-          src="/paws.png" 
-          alt="Paw icon" 
-          width={30} 
-          height={30} 
+        <Image
+          src="/paws.png"
+          alt="Paw icon"
+          width={30}
+          height={30}
           className="mr-1 mt-2"
         />
         <h1 className="text-4xl font-bold text-gray-50 text-center mt-2">
