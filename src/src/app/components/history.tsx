@@ -13,8 +13,8 @@ export default function History({ content }: HistoryDataProps) {
           <div className="relative w-1/2 m-8">
             <div className="border-r-2 border-gray-50 absolute h-full top-0 left-3.5"></div>
             <ul className="list-none m-0 p-0">
-              {content.map((history) => (
-                <li className="mb-2">
+              {content.map((history, index) => (
+                <li key={index} className="mb-2">
                   <div className="flex items-center mb-1">
                     <div className="bg-gray-50 rounded-full h-8 w-8"></div>
                     <div className="flex-1 ml-4 text-gray-50 font-bold">
