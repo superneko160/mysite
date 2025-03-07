@@ -26,7 +26,9 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error(error);
     return new Response(
-      JSON.stringify({ body: "Failed to send message. Please try again later.\nメッセージが送信できませんでした。数分後に再度お試しください。" }),
+      JSON.stringify({
+        body: "Failed to send message. Please try again later.\nメッセージが送信できませんでした。数分後に再度お試しください。",
+      }),
     );
   }
 }
