@@ -40,7 +40,7 @@ export default function Home() {
       <LinksAndContact />
       <hr className="my-1" />
       <div className="text-gray-50 text-center mb-1">
-        <small>&copy;Sneko {td.getFullYear()}</small>
+        <small>&copy;Sneko 2023 - {td.getFullYear()}</small>
       </div>
     </main>
   );
