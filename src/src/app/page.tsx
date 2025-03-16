@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import type { HistoryData } from "./types/HistoryData/";
+import ThemeToggle from "./components/themeToggle";
 import Overview from "./components/overview";
 import Skill from "./components/skill";
 import History from "./components/history";
@@ -20,26 +21,31 @@ export default function Home() {
   const td = new Date();
 
   return (
-    <main className="container mx-auto px-8 bg-slate-950">
-      <div className="flex items-center justify-center">
-        <Image
-          src="/paws.png"
-          alt="Paw icon"
-          width={30}
-          height={30}
-          className="mr-1 mt-2"
-        />
-        <h1 className="text-4xl font-bold text-gray-50 text-center mt-2">
-          Sneko
-        </h1>
+    <main className="container mx-auto px-8 bg-stone-200 dark:bg-slate-950">
+      <div className="flex items-center justify-between relative">
+        <div className="flex items-center absolute left-1/2 transform -translate-x-1/2">
+          <Image
+            src="/paws.png"
+            alt="Paw icon"
+            width={30}
+            height={30}
+            className="mr-1 mt-2"
+          />
+          <h1 className="text-4xl font-bold text-gray-600 dark:text-gray-50 text-center mr-4 mt-2">
+            Sneko
+          </h1>
+        </div>
+        <div className="mt-2 ml-auto">
+          <ThemeToggle />
+        </div>
       </div>
-      <hr className="my-2" />
+      <hr className="border-stone-300 my-2" />
       <Overview content={overview_content} />
       <Skill content={skill_content} />
       <History content={history_content} />
       <LinksAndContact />
-      <hr className="my-1" />
-      <div className="text-gray-50 text-center mb-1">
+      <hr className="border-stone-300 my-1" />
+      <div className="text-gray-600 dark:text-gray-50 text-center mb-1">
         <small>&copy;Sneko 2023 - {td.getFullYear()}</small>
       </div>
     </main>
