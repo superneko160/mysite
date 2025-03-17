@@ -21,7 +21,7 @@ export default function Home() {
   const td = new Date();
 
   return (
-    <main className="container mx-auto px-8 bg-stone-200 dark:bg-slate-950">
+    <main className="container mx-auto px-8 bg-stone-200 dark:bg-slate-900">
       <div className="flex items-center justify-between relative">
         <div className="flex items-center absolute left-1/2 transform -translate-x-1/2">
           <Image
