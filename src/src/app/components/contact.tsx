@@ -1,7 +1,7 @@
 "use client";
 
 import React, { FormEvent, useState } from "react";
-import { z } from "zod";
+import * as v from 'valibot';
 import InputEmail from "./inputEmail";
 import Textarea from "./textarea";
 import Button from "./button";
@@ -34,16 +34,18 @@ export default function Contact() {
 
     const formData = new FormData(event.currentTarget);
 
-    const email = z.string().email();
-    const textarea = z.string();
-    const form_email = email.safeParse(formData.get("email"));
-    if (!form_email.success) {
+    const emailSchema = v.pipe(v.string(), v.email());
+    const email = v.safeParse(emailSchema, formData.get("email"));
+
+    if (!email.success) {
       alert("Eメールの形式ではありません");
       return;
     }
 
-    const form_textarea = textarea.safeParse(formData.get("textarea"));
-    if (!form_textarea.success) {
+    const textareaSchema = v.pipe(v.string(), v.minLength(1), v.maxLength(200));
+    const textarea = v.safeParse(textareaSchema, formData.get("textarea"));
+
+    if (!textarea.success) {
       alert("テキストエリアに入力された値が不正です");
       return;
     }
@@ -51,8 +53,8 @@ export default function Contact() {
     const response = await fetch("/api/contact", {
       method: "POST",
       body: JSON.stringify({
-        email: form_email.data,
-        message: form_textarea.data,
+        email: email.output,
+        message: textarea.output,
       }),
     });
 
