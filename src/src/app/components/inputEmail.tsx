@@ -26,7 +26,7 @@ export default function InputEmail({ name, value, onChange }: InputEmailProps) {
       <input
         type="text"
         id="email-address-icon"
-        className="text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 bg-stone-100 border-stone-50 dark:bg-gray-700 dark:border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+        className="text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 bg-stone-100 border-stone-50 dark:bg-gray-700 dark:border-gray-600 placeholder-gray-400 text-gray-800 dark:text-white focus:ring-blue-500 focus:border-blue-500"
         placeholder="Your@email.com"
         required
         name={name}
