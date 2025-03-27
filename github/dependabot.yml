@@ -1,0 +1,15 @@
+version: 2
+updates:
+  # npmパッケージの依存関係を管理
+  - package-ecosystem: "npm"
+    directory: "/src"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "20:00"
+      timezone: "Asia/Tokyo"
+    # PRの設定
+    open-pull-requests-limit: 10
+    versioning-strategy: auto
+    labels:
+      - "dependencies"
