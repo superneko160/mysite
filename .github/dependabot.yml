@@ -13,3 +13,8 @@ updates:
     versioning-strategy: auto
     labels:
       - "dependencies"
+    # Tailwind CSS関連パッケージを除外
+    ignore:
+      - dependency-name: "tailwindcss"
+      - dependency-name: "postcss"
+      - dependency-name: "autoprefixer"
