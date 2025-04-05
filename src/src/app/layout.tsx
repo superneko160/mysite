@@ -16,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={`${quicksand.className} bg-stone-100 dark:bg-slate-950 transition-colors duration-300`}>
+      <body
+        className={`${quicksand.className} bg-stone-100 dark:bg-slate-950 transition-colors duration-300`}
+      >
         {children}
       </body>
     </html>
