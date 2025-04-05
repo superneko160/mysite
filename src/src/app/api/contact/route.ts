@@ -1,8 +1,9 @@
 import { NextRequest } from "next/server";
 import nodemailer from "nodemailer";
+import type { ContactForm } from "./../../types/ContactForm";
 
 export async function POST(request: NextRequest) {
-  const body = await request.json();
+  const body: ContactForm = await request.json();
 
   const transporter = nodemailer.createTransport({
     host: process.env.MAILHOST,
