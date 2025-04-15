@@ -18,3 +18,15 @@ updates:
       - dependency-name: "tailwindcss"
       - dependency-name: "postcss"
       - dependency-name: "autoprefixer"
+    # React系のパッケージの更新はまとめて実施
+    groups:
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+        update-types:
+          - "major"
+          - "minor"
+          - "patch"
