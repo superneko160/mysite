@@ -1,7 +1,9 @@
 import Image from "next/image";
+import * as motion from "motion/react-client";
 
 import type { HistoryData } from "./types/HistoryData/";
 import ThemeToggle from "./components/themeToggle";
+import FadeInSection from "./components/fadeInSection";
 import Overview from "./components/overview";
 import Skill from "./components/skill";
 import History from "./components/history";
@@ -40,10 +42,23 @@ export default function Home() {
         </div>
       </div>
       <hr className="border-stone-300 my-2" />
-      <Overview content={overview_content} />
-      <Skill content={skill_content} />
-      <History content={history_content} />
-      <LinksAndContact />
+
+      <FadeInSection>
+        <Overview content={overview_content} />
+      </FadeInSection>
+
+      <FadeInSection>
+        <Skill content={skill_content} />
+      </FadeInSection>
+
+      <FadeInSection>
+        <History content={history_content} />
+      </FadeInSection>
+
+      <FadeInSection>
+        <LinksAndContact />
+      </FadeInSection>
+
       <hr className="border-stone-300 my-1" />
       <div className="text-gray-600 dark:text-gray-50 text-center mb-1">
         <small>&copy;Sneko 2023 - {td.getFullYear()}</small>
