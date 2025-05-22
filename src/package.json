@@ -15,7 +15,7 @@
   "dependencies": {
     "motion": "^12.10.5",
     "next": "15.2.4",
-    "nodemailer": "^6.10.0",
+    "nodemailer": "^7.0.3",
     "react": "^19",
     "react-dom": "^19",
     "valibot": "^1.1.0"
