@@ -1,5 +1,4 @@
 import Image from "next/image";
-import * as motion from "motion/react-client";
 
 import type { HistoryData } from "./types/HistoryData/";
 import ThemeToggle from "./components/themeToggle";
