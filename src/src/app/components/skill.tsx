@@ -41,7 +41,7 @@ export default function Skill({ content }: SkillProps) {
               Others
             </h3>
             <img
-              src="https://skillicons.dev/icons?i=git,githubactions,bash,vim,docker,prisma,vite,vitest,figma&perline=5"
+              src="https://skillicons.dev/icons?i=git,githubactions,bash,linux,vim,docker,prisma,vite,vitest,figma&perline=5"
               alt="skill:Others git,githubactions,bash,vim,docker,prisma,vite,vitest,figma"
             />
           </div>
