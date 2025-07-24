@@ -3,14 +3,14 @@ type SkillProps = { content: string };
 export default function Skill({ content }: SkillProps) {
   return (
     <div className="max-w-full my-2">
-      <div className="bg-stone-300 dark:bg-sky-950 rounded p-4 flex flex-col justify-between leading-normal">
+      <div className="bg-stone-300 dark:bg-zinc-800 text-gray-600 dark:text-amber-100 rounded p-4 flex flex-col justify-between leading-normal">
         <div className="mb-2">
-          <h2 className="text-gray-600 dark:text-gray-50 font-bold text-xl mb-2">
+          <h2 className="font-bold text-xl mb-2">
             Skill
           </h2>
-          <p className="text-gray-600 dark:text-gray-50 text-base">{content}</p>
+          <p className="text-base">{content}</p>
           <div className="mt-5">
-            <h3 className="text-xl text-gray-600 dark:text-gray-50 mb-0.5">
+            <h3 className="text-xl mb-1">
               Programming Language
             </h3>
             <img
@@ -19,7 +19,7 @@ export default function Skill({ content }: SkillProps) {
             />
           </div>
           <div className="mt-4">
-            <h3 className="text-xl text-gray-600 dark:text-gray-50 mb-0.5">
+            <h3 className="text-xl mb-1">
               Library and Framework
             </h3>
             <img
@@ -28,16 +28,16 @@ export default function Skill({ content }: SkillProps) {
             />
           </div>
           <div className="mt-4">
-            <h3 className="text-xl text-gray-600 dark:text-gray-50 mb-0.5">
+            <h3 className="text-xl mb-1">
               Database
             </h3>
             <img
-              src="https://skillicons.dev/icons?i=mysql,postgres,sqlite"
-              alt="skill:Database mysql,postgres,sqlite"
+              src="https://skillicons.dev/icons?i=mysql,postgres,redis"
+              alt="skill:Database mysql,postgres,redis"
             />
           </div>
           <div className="mt-4">
-            <h3 className="text-xl text-gray-600 dark:text-gray-50 mb-0.5">
+            <h3 className="text-xl mb-1">
               Others
             </h3>
             <img

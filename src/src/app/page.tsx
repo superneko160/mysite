@@ -22,7 +22,7 @@ export default function Home() {
   const td = new Date();
 
   return (
-    <main className="container mx-auto px-8 bg-stone-200 dark:bg-slate-900">
+    <main className="container mx-auto px-8 bg-stone-200 dark:bg-neutral-900">
       <div className="flex items-center justify-between relative">
         <div className="flex items-center absolute left-1/2 transform -translate-x-1/2">
           <Image
@@ -32,7 +32,7 @@ export default function Home() {
             height={30}
             className="mr-1 mt-2"
           />
-          <h1 className="text-4xl font-bold text-gray-600 dark:text-gray-50 text-center mr-4 mt-2">
+          <h1 className="text-4xl font-bold text-gray-600 dark:text-amber-100 text-center mr-4 mt-2">
             Sneko
           </h1>
         </div>
@@ -40,7 +40,7 @@ export default function Home() {
           <ThemeToggle />
         </div>
       </div>
-      <hr className="border-stone-300 my-2" />
+      <hr className="border-stone-300 dark:border-amber-100 my-2" />
 
       <FadeInSection>
         <Overview content={overview_content} />
@@ -58,8 +58,8 @@ export default function Home() {
         <LinksAndContact />
       </FadeInSection>
 
-      <hr className="border-stone-300 my-1" />
-      <div className="text-gray-600 dark:text-gray-50 text-center mb-1">
+      <hr className="border-stone-300 dark:border-amber-100 my-1" />
+      <div className="text-gray-600 dark:text-amber-100 text-center mb-2">
         <small>&copy;Sneko 2023 - {td.getFullYear()}</small>
       </div>
     </main>
