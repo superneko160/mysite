@@ -56,7 +56,7 @@ export default function Contact() {
 
   return (
     <div className="py-2">
-      <h2 className="text-xl text-gray-600 dark:text-gray-50 mb-0.5">
+      <h2 className="text-xl mb-0.5">
         Contacts
       </h2>
       <form className="max-w-sm" onSubmit={onSubmit}>
@@ -70,7 +70,7 @@ export default function Contact() {
             onChange={handleChange}
           />
         </div>
-        <div className="flex mb-1 justify-center sm:justify-start">
+        <div className="flex mt-2 justify-center sm:justify-start">
           <Button text={"Send Message"} />
         </div>
       </form>
