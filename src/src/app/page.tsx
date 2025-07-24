@@ -1,5 +1,7 @@
-import Image from "next/image";
+"use client";
 
+import Image from "next/image";
+import { useTheme } from "./context/ThemeContext";
 import type { HistoryData } from "./types/HistoryData/";
 import ThemeToggle from "./components/themeToggle";
 import FadeInSection from "./components/fadeInSection";
@@ -9,6 +11,7 @@ import History from "./components/history";
 import LinksAndContact from "./components/linksAndContact";
 
 export default function Home() {
+  const { darkMode } = useTheme();
   const overview_content =
     "Hi there. I'm Sneko. I can write some programs and I'm particularly interested in backend development. A bit about me: I love cats, though I don't have one at the moment.";
   const skill_content =
@@ -26,7 +29,7 @@ export default function Home() {
       <div className="flex items-center justify-between relative">
         <div className="flex items-center absolute left-1/2 transform -translate-x-1/2">
           <Image
-            src="/paws.png"
+            src={darkMode ? "/paws.png" : "/paws_light_theme.png"}
             alt="Paw icon"
             width={30}
             height={30}
