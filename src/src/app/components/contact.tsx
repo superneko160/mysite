@@ -1,7 +1,6 @@
 "use client";
 
 import React, { FormEvent, useState } from "react";
-import * as v from "valibot";
 import { validateContactForm } from "./../utils/validator";
 import type { ContactForm } from "./../types/ContactForm";
 import InputEmail from "./inputEmail";
