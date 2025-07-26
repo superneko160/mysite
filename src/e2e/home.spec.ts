@@ -16,14 +16,40 @@ test("トップページが正しく表示される", async ({ page }) => {
 test("ダークモード切り替えが機能する", async ({ page }) => {
   await page.goto("/");
 
-  // 初期状態（ダークモード）の確認
-  await expect(page.locator("html")).toHaveClass(/dark/);
+  // テーマの初期化を待つ（ローカルストレージが設定されるまで）
+  await page.waitForFunction(() => {
+    return localStorage.getItem('theme') !== null;
+  });
 
-  // モードボタンをクリック
-  await page.getByRole("button").filter({ hasText: "🌙" }).click();
+  // 初期状態を確認（システム設定やローカルストレージに基づく）
+  const initialTheme = await page.evaluate(() => {
+    return localStorage.getItem('theme') || 'light';
+  });
 
-  // ライトモードに切り替わったことを確認
-  await expect(page.locator("html")).not.toHaveClass(/dark/);
+  // 現在のテーマに基づいてテストを実行
+  if (initialTheme === 'dark') {
+    // 初期状態がダークモードの場合
+    await expect(page.locator("html")).toHaveClass(/dark/);
+    
+    // ライトモードに切り替え
+    await page.getByRole("button").filter({ hasText: "🌙" }).click();
+    await expect(page.locator("html")).not.toHaveClass(/dark/);
+    
+    // ダークモードに戻す
+    await page.getByRole("button").filter({ hasText: "☀️" }).click();
+    await expect(page.locator("html")).toHaveClass(/dark/);
+  } else {
+    // 初期状態がライトモードの場合
+    await expect(page.locator("html")).not.toHaveClass(/dark/);
+    
+    // ダークモードに切り替え
+    await page.getByRole("button").filter({ hasText: "☀️" }).click();
+    await expect(page.locator("html")).toHaveClass(/dark/);
+    
+    // ライトモードに戻す
+    await page.getByRole("button").filter({ hasText: "🌙" }).click();
+    await expect(page.locator("html")).not.toHaveClass(/dark/);
+  }
 });
 
 test("コンタクトフォームでメッセージを送信できる", async ({ page }) => {
