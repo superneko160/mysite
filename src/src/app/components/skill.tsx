@@ -1,6 +1,4 @@
-type SkillProps = { content: string };
-
-export default function Skill({ content }: SkillProps) {
+export default function Skill() {
   return (
     <div className="max-w-full my-2">
       <div className="bg-stone-300 dark:bg-zinc-800 text-gray-600 dark:text-amber-100 rounded p-4 flex flex-col justify-between leading-normal">
@@ -8,7 +6,6 @@ export default function Skill({ content }: SkillProps) {
           <h2 className="font-bold text-xl mb-2">
             Skill
           </h2>
-          <p className="text-base">{content}</p>
           <div className="mt-5">
             <h3 className="text-xl mb-1">
               Programming Language
