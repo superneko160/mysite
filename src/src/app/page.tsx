@@ -46,7 +46,7 @@ export default function Home() {
             <ThemeToggle />
           </div>
         </div>
-        <hr className="border-stone-300 dark:border-amber-100 my-2" />
+        <hr className="border-stone-300 dark:border-amber-100/25 my-2" />
 
         <FadeInSection>
           <Overview content={overview_content} />
@@ -64,7 +64,7 @@ export default function Home() {
           <LinksAndContact />
         </FadeInSection>
 
-        <hr className="border-stone-300 dark:border-amber-100 my-1" />
+        <hr className="border-stone-300 dark:border-amber-100/25 my-1" />
         <div className="text-gray-600 dark:text-amber-100 text-center mb-2">
           <small>&copy;Sneko 2023 - {td.getFullYear()}</small>
         </div>

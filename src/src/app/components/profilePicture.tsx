@@ -8,6 +8,7 @@ export default function ProfilePicture() {
         alt="Profile picture"
         width={200}
         height={200}
+        priority={true}
         className="rounded-full"
       />
     </>
