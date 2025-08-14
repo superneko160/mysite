@@ -18,34 +18,34 @@ test("ダークモード切り替えが機能する", async ({ page }) => {
 
   // テーマの初期化を待つ（ローカルストレージが設定されるまで）
   await page.waitForFunction(() => {
-    return localStorage.getItem('theme') !== null;
+    return localStorage.getItem("theme") !== null;
   });
 
   // 初期状態を確認（システム設定やローカルストレージに基づく）
   const initialTheme = await page.evaluate(() => {
-    return localStorage.getItem('theme') || 'light';
+    return localStorage.getItem("theme") || "light";
   });
 
   // 現在のテーマに基づいてテストを実行
-  if (initialTheme === 'dark') {
+  if (initialTheme === "dark") {
     // 初期状態がダークモードの場合
     await expect(page.locator("html")).toHaveClass(/dark/);
-    
+
     // ライトモードに切り替え
     await page.getByRole("button").filter({ hasText: "🌙" }).click();
     await expect(page.locator("html")).not.toHaveClass(/dark/);
-    
+
     // ダークモードに戻す
     await page.getByRole("button").filter({ hasText: "☀️" }).click();
     await expect(page.locator("html")).toHaveClass(/dark/);
   } else {
     // 初期状態がライトモードの場合
     await expect(page.locator("html")).not.toHaveClass(/dark/);
-    
+
     // ダークモードに切り替え
     await page.getByRole("button").filter({ hasText: "☀️" }).click();
     await expect(page.locator("html")).toHaveClass(/dark/);
-    
+
     // ライトモードに戻す
     await page.getByRole("button").filter({ hasText: "🌙" }).click();
     await expect(page.locator("html")).not.toHaveClass(/dark/);
@@ -60,7 +60,9 @@ test("コンタクトフォームでメッセージを送信できる", async ({
 
   // フォームに値を入力
   await page.getByPlaceholder("Your@email.com").fill("test@example.com");
-  await page.getByPlaceholder(/The message you can send is limited/).fill("Test message");
+  await page
+    .getByPlaceholder(/The message you can send is limited/)
+    .fill("Test message");
 
   // メッセージを送信
   await page.getByRole("button", { name: "Send Message" }).click();
@@ -73,7 +75,9 @@ test("コンタクトフォームでメッセージを送信できる", async ({
 
   // フォームがリセットされたことを確認
   await expect(page.getByPlaceholder("Your@email.com")).toHaveValue("");
-  await expect(page.getByPlaceholder(/The message you can send is limited/)).toHaveValue("");
+  await expect(
+    page.getByPlaceholder(/The message you can send is limited/),
+  ).toHaveValue("");
 });
 
 test("コンタクトフォームのバリデーションが機能する", async ({ page }) => {
@@ -84,12 +88,16 @@ test("コンタクトフォームのバリデーションが機能する", async
 
   // 無効なメールアドレスでテスト
   await page.getByPlaceholder("Your@email.com").fill("invalid-email");
-  await page.getByPlaceholder(/The message you can send is limited/).fill("Test message");
+  await page
+    .getByPlaceholder(/The message you can send is limited/)
+    .fill("Test message");
   await page.getByRole("button", { name: "Send Message" }).click();
 
   // バリデーションエラーのアラートを確認
   page.on("dialog", async (dialog) => {
-    expect(dialog.message()).toContain("有効なメールアドレスを入力してください");
+    expect(dialog.message()).toContain(
+      "有効なメールアドレスを入力してください",
+    );
     await dialog.accept();
   });
 });
