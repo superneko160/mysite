@@ -1,12 +1,11 @@
 {
   "name": "mysite",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}' && next lint --fix",
     "typecheck": "tsc --noEmit",
     "test:e2e": "playwright test",
