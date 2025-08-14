@@ -55,9 +55,7 @@ export default function Contact() {
 
   return (
     <div className="py-2">
-      <h2 className="text-xl mb-0.5">
-        Contacts
-      </h2>
+      <h2 className="text-xl mb-0.5">Contacts</h2>
       <form className="max-w-sm" onSubmit={onSubmit}>
         <InputEmail name={"email"} value={data.email} onChange={handleChange} />
         <div className="mb-1">
