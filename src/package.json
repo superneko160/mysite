@@ -22,7 +22,7 @@
   "devDependencies": {
     "@playwright/test": "^1.54.2",
     "@types/node": "^22",
-    "@types/nodemailer": "^6.4.17",
+    "@types/nodemailer": "^7.0.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@typescript-eslint/eslint-plugin": "^8.26.0",
