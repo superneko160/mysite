@@ -17,7 +17,7 @@
     "nodemailer": "^7.0.9",
     "react": "^19",
     "react-dom": "^19",
-    "valibot": "^1.1.0"
+    "valibot": "^1.2.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
