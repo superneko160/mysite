@@ -30,5 +30,5 @@ npm run test:e2e
 npm run test:e2e-report
 ```
 
-> ![TIPS]
-> レポートはhttp://localhost:9323ポートで表示されるが、docker環境からはポート接続していないので、ローカル側で行う
+> [!NOTE]
+> レポートは http://localhost:9323 で表示されるが、docker環境からはポート接続していないので、ローカル側で行う
