@@ -1,24 +1,24 @@
 # MySite
 
-## Getting Started
+## Setup 
 
 ```sh
-docker compose up -d --build
-```
+docker compose up -d
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Note
-
-```sh
 docker compose exec app bash
 ```
 
-### Format
+```sh
+npm install
+```
+
+## Run
 
 ```sh
-npm run format
+npm run dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ### E2E Test
 
@@ -29,3 +29,6 @@ npm run test:e2e
 ```sh
 npm run test:e2e-report
 ```
+
+> ![TIPS]
+> レポートはhttp://localhost:9323ポートで表示されるが、docker環境からはポート接続していないので、ローカル側で行う
