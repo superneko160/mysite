@@ -28,8 +28,8 @@ export default function Skill() {
           <div className="mt-4">
             <h3 className="text-xl mb-1">Others</h3>
             <img
-              src="https://skillicons.dev/icons?i=git,githubactions,bash,linux,vim,docker,prisma,vite,vitest,figma&perline=5"
-              alt="skill:Others git,githubactions,bash,vim,docker,prisma,vite,vitest,figma"
+              src="https://skillicons.dev/icons?i=git,githubactions,linux,vim,neovim,docker,prisma,vite,vitest,figma&perline=5"
+              alt="skill:Others git,githubactions,vim,neovim,docker,prisma,vite,vitest,figma"
             />
           </div>
         </div>
